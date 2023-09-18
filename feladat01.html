@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat 01</title>
+    <link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+            crossorigin="anonymous">
+</head>
+<body style="background-color:rgb(243, 243, 243);">
+    <div class="container">
+        <div    class="row align-items-center text light text-center"
+                style="min-height: 100vh;">
+
+                <div class="col-12">
+                    <button id="button" class="btn btn-primary btn-lg" onmouseenter="MouseTask()" onmouseleave="MouseTask2()">Húzd ide az egeret!</button>
+                </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+        function MouseTask(){
+            document.getElementById('button').innerHTML = "Sikerült!";  
+            document.getElementById("button").classList.remove('btn-primary');
+            document.getElementById("button").classList.add('btn-success');       
+        }
+        function MouseTask2(){
+            document.getElementById('button').innerHTML = "Húzd ide az egeret!";
+            document.getElementById("button").classList.remove('btn-success');
+            document.getElementById("button").classList.add('btn-primary');
+        }
+
+        // let item = document.getElementById("button");
+        // item.addEventListener("mouseover", MouseTask);
+        // item.addEventListener("mouseout", MouseTask2);
+
+
+    </script>
+</body>
+</html>
